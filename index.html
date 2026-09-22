@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,17 +12,21 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header class="header">
-    <a href="#" class="logo">NOVA<span>®</span></a>
+    <a href="#home" class="logo" aria-label="NOVA home">
+      NOVA<span>®</span>
+    </a>
 
     <nav class="nav" aria-label="Main navigation">
       <a href="#services">Services</a>
@@ -32,50 +35,64 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <button class="menu-toggle" aria-label="Open menu">
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
       Menu
     </button>
   </header>
 
   <main>
+
+    <!-- HERO -->
+
     <section class="hero" id="home">
-        
-<div class="hero-decoration" aria-hidden="true">
-  <svg viewBox="0 0 200 200" role="presentation">
-    <defs>
-      <path
-        id="textCircle"
-        d="M 100,100
-           m -72,0
-           a 72,72 0 1,1 144,0
-           a 72,72 0 1,1 -144,0"
-      />
-    </defs>
 
-    <circle
-      cx="100"
-      cy="100"
-      r="72"
-      class="decoration-ring"
-    />
+      <div class="hero-decoration" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <defs>
+            <path
+              id="textCircle"
+              d="M 100,100
+                 m -72,0
+                 a 72,72 0 1,1 144,0
+                 a 72,72 0 1,1 -144,0"
+            />
+          </defs>
 
-    <text class="decoration-text">
-      <textPath href="#textCircle">
-        NOVA® · CREATIVE · DIGITAL · STUDIO ·
-      </textPath>
-    </text>
+          <circle
+            cx="100"
+            cy="100"
+            r="72"
+            class="decoration-ring"
+          />
 
-    <circle
-      cx="100"
-      cy="100"
-      r="9"
-      class="decoration-dot"
-    />
-  </svg>
-</div>
-      <p class="eyebrow">Independent creative studio — 2026</p>
+          <text class="decoration-text">
+            <textPath href="#textCircle">
+              NOVA® · CREATIVE · DIGITAL · STUDIO ·
+            </textPath>
+          </text>
 
-      <h1>
+          <circle
+            cx="100"
+            cy="100"
+            r="9"
+            class="decoration-dot"
+          />
+        </svg>
+      </div>
+
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <p class="eyebrow hero-eyebrow">
+        Independent creative studio — 2026
+      </p>
+
+      <h1 class="hero-title">
         We make brands
         <span>impossible</span>
         to ignore.
@@ -88,169 +105,260 @@
         </p>
 
         <a href="#contact" class="button">
-          Start a project ↗
+          Start a project <span>↗</span>
         </a>
       </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span class="scroll-line"></span>
+        Scroll to explore
+      </div>
+
     </section>
+
+
+    <!-- SERVICES -->
 
     <section class="services" id="services">
-      <p class="eyebrow">01 — What we do</p>
-      <h2>Ideas into impact.</h2>
+
+      <p class="eyebrow reveal">01 — What we do</p>
+
+      <h2 class="section-title reveal">
+        Ideas into
+        <span>impact.</span>
+      </h2>
 
       <div class="service-list">
-        <article class="service-item">
-          <span>01</span>
+
+        <article class="service-item reveal">
+          <span class="service-number">01</span>
+
           <h3>Brand Identity</h3>
-          <p>Visual identities that help brands stand out.</p>
+
+          <p>
+            Visual identities that help brands
+            stand out and stay remembered.
+          </p>
+
+          <span class="service-arrow" aria-hidden="true">↗</span>
         </article>
 
-        <article class="service-item">
-          <span>02</span>
+        <article class="service-item reveal">
+          <span class="service-number">02</span>
+
           <h3>Web Design</h3>
-          <p>Digital experiences designed around people.</p>
+
+          <p>
+            Digital experiences designed
+            around people and purpose.
+          </p>
+
+          <span class="service-arrow" aria-hidden="true">↗</span>
         </article>
 
-        <article class="service-item">
-          <span>03</span>
+        <article class="service-item reveal">
+          <span class="service-number">03</span>
+
           <h3>Creative Development</h3>
-          <p>Fast, responsive and engaging websites.</p>
+
+          <p>
+            Fast, responsive and engaging
+            websites built with intention.
+          </p>
+
+          <span class="service-arrow" aria-hidden="true">↗</span>
         </article>
+
       </div>
+
     </section>
 
-    
-<section class="work" id="work">
-  <div class="section-heading">
-    <p class="eyebrow">02 — Selected work</p>
-    <span class="section-number">03 projects</span>
-  </div>
 
-  <h2>Made to be<br>remembered.</h2>
+    <!-- WORK -->
 
-  <div class="work-grid">
+    <section class="work" id="work">
 
-    <article class="work-card work-card-large">
-      <div class="work-visual visual-brand">
-        <span class="visual-label">BRAND / 001</span>
-
-        <div class="brand-symbol">F</div>
-
-        <span class="visual-caption">FORM OBJECTS®</span>
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 — Selected work</p>
+        <span class="section-number">03 projects</span>
       </div>
 
-      <div class="work-info">
-        <div>
-          <h3>Form / Objects</h3>
-          <p>Brand identity · Art direction</p>
+      <h2 class="section-title reveal">
+        Made to be
+        <span>remembered.</span>
+      </h2>
+
+      <div class="work-grid">
+
+        <article class="work-card work-card-large reveal">
+
+          <div class="work-visual visual-brand">
+            <span class="visual-label">BRAND / 001</span>
+
+            <div class="brand-symbol" aria-hidden="true">F</div>
+
+            <span class="visual-caption">FORM OBJECTS®</span>
+            <span class="visual-corner">01 / 03</span>
+          </div>
+
+          <div class="work-info">
+            <div>
+              <h3>Form / Objects</h3>
+              <p>Brand identity · Art direction</p>
+            </div>
+
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </div>
+
+        </article>
+
+
+        <article class="work-card reveal">
+
+          <div class="work-visual visual-digital">
+            <span class="visual-label">DIGITAL / 002</span>
+
+            <div class="digital-shape">
+              <span>09</span>
+            </div>
+
+            <span class="visual-caption">STUDIO 09</span>
+            <span class="visual-corner">02 / 03</span>
+          </div>
+
+          <div class="work-info">
+            <div>
+              <h3>Studio 09</h3>
+              <p>Digital experience · Development</p>
+            </div>
+
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </div>
+
+        </article>
+
+
+        <article class="work-card reveal">
+
+          <div class="work-visual visual-future">
+            <span class="visual-label">STRATEGY / 003</span>
+
+            <div class="future-title">MATTER</div>
+
+            <span class="visual-caption">FUTURE MATTER</span>
+            <span class="visual-corner">03 / 03</span>
+          </div>
+
+          <div class="work-info">
+            <div>
+              <h3>Future Matter</h3>
+              <p>Creative strategy · Web design</p>
+            </div>
+
+            <span class="work-arrow" aria-hidden="true">↗</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+      <div>
+        <p class="eyebrow reveal">03 — About us</p>
+      </div>
+
+      <div class="about-content">
+
+        <h2 class="section-title reveal">
+          Small team.
+          <span>Big ideas.</span>
+        </h2>
+
+        <p class="about-text reveal">
+          NOVA® is a fictional independent creative studio focused
+          on building distinctive brands and digital experiences
+          for ambitious businesses.
+        </p>
+
+        <div class="stats">
+
+          <div class="stat reveal">
+            <strong data-counter data-target="24">00</strong>
+            <span>Concepts created</span>
+          </div>
+
+          <div class="stat reveal">
+            <strong data-counter data-target="8">00</strong>
+            <span>Creative disciplines</span>
+          </div>
+
+          <div class="stat reveal">
+            <strong class="infinity-stat">∞</strong>
+            <span>Room for ideas</span>
+          </div>
+
         </div>
 
-        <span class="work-arrow">↗</span>
       </div>
-    </article>
 
-    <article class="work-card">
-      <div class="work-visual visual-digital">
-        <span class="visual-label">DIGITAL / 002</span>
+    </section>
 
-        <div class="digital-shape">
-          <span>09</span>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+      <div class="contact-pattern" aria-hidden="true"></div>
+
+      <p class="eyebrow reveal">04 — Have a project?</p>
+
+      <div class="contact-content">
+
+        <h2 class="section-title reveal">
+          Let's create
+          <span>something bold.</span>
+        </h2>
+
+        <div class="contact-bottom reveal">
+
+          <p>
+            Have an idea, a challenge or a project in mind?
+            Let's talk about making it happen.
+          </p>
+
+          <a
+            href="mailto:hello@nova-studio.example"
+            class="button button-dark"
+          >
+            hello@nova-studio.example <span>↗</span>
+          </a>
+
         </div>
 
-        <span class="visual-caption">STUDIO 09</span>
       </div>
 
-      <div class="work-info">
-        <div>
-          <h3>Studio 09</h3>
-          <p>Digital experience · Development</p>
-        </div>
-
-        <span class="work-arrow">↗</span>
-      </div>
-    </article>
-
-    <article class="work-card">
-      <div class="work-visual visual-future">
-        <span class="visual-label">STRATEGY / 003</span>
-
-        <div class="future-title">MATTER</div>
-
-        <span class="visual-caption">FUTURE MATTER</span>
+      <div class="contact-orbit" aria-hidden="true">
+        NOVA® — CREATE — EXPLORE — REPEAT —
       </div>
 
-      <div class="work-info">
-        <div>
-          <h3>Future Matter</h3>
-          <p>Creative strategy · Web design</p>
-        </div>
+    </section>
 
-        <span class="work-arrow">↗</span>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-    
-<section class="about" id="about">
-  <div>
-    <p class="eyebrow">03 — About us</p>
-  </div>
-
-  <div class="about-content">
-    <h2>Small team.<br>Big ideas.</h2>
-
-    <p class="about-text">
-      NOVA® is a fictional independent creative studio focused
-      on building distinctive brands and digital experiences
-      for ambitious businesses.
-    </p>
-
-    <div class="stats">
-      <div class="stat">
-        <strong>24</strong>
-        <span>Concepts created</span>
-      </div>
-
-      <div class="stat">
-        <strong>08</strong>
-        <span>Creative disciplines</span>
-      </div>
-
-      <div class="stat">
-        <strong>∞</strong>
-        <span>Room for ideas</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-    
-<section class="contact" id="contact">
-  <p class="eyebrow">04 — Have a project?</p>
-
-  <div class="contact-content">
-    <h2>Let's create<br>something bold.</h2>
-
-    <div class="contact-bottom">
-      <p>
-        Have an idea, a challenge or a project in mind?
-        Let's talk about making it happen.
-      </p>
-
-      <a href="mailto:hello@nova-studio.example" class="button button-dark">
-        hello@nova-studio.example ↗
-      </a>
-    </div>
-  </div>
-</section>
   </main>
+
 
   <footer class="footer">
     <p>© 2026 NOVA® Studio</p>
     <p>Built with intention.</p>
   </footer>
 
-  <script src="scripts/script.js"></script>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
